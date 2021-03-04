@@ -8,7 +8,7 @@ import datetime
 app = Flask(__name__)
 cors = CORS(app=app,resources={r"/api/*":{"origins":"*"}})
 app.config["MONGO_URI"] = "mongodb://localhost:27017/twigatest"
-app.config["SECRET_KEY"] = "2uhebrr3u3480ed20dxahhaj9ajiopowwqixsa9wuqw7eyurhfnwewdyuhdcxw"
+app.config["SECRET_KEY"] = "2uhebrr3u3480ed20dxahhaj9ajiopowwqixsa9wuqw7eyurhfnwewdyuhdcxw3"
 mongo = PyMongo(app)
 Loaders = mongo.db["Loaders"]
 Carriers = mongo.db["Carriers"]
