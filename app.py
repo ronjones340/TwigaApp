@@ -7,7 +7,7 @@ import datetime
 
 app = Flask(__name__)
 cors = CORS(app=app,resources={r"/api/*":{"origins":"*"}})
-app.config["MONGO_URI"] = "mongodb://localhost:27017/twigatest"
+app.config["MONGO_URI"] = "mongodb+srv://Emmanuel:Emmanu3l@cluster0.w1fou.mongodb.net/TwigaDB?retryWrites=true&w=majority"
 app.config["SECRET_KEY"] = "2uhebrr3u3480ed20dxahhaj9ajiopowwqixsa9wuqw7eyurhfnwewdyuhdcxw3"
 mongo = PyMongo(app)
 Loaders = mongo.db["Loaders"]
@@ -312,4 +312,4 @@ def confirm():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=False)
